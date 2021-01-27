@@ -53,7 +53,7 @@ export default class CreateRoomPage extends Component {
 
   render() {
     return (
-      <div class='container'>
+      <div >
         <Grid container spacing={1}>
           <Grid item xs={12} align="center">
             <Typography component="h2" variant="h2">
