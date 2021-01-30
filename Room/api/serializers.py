@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Room
+from .models import Room, Person
 
 
 class RoomSerializer(serializers.ModelSerializer):
@@ -14,4 +14,14 @@ class CreateRoomSerializer(serializers.ModelSerializer):
         model = Room
         fields = ('guest_can_pause', 'votes_to_skip')
 
+
+class PersonSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Person
+        fields = ('user_name', 'code')
+
     
+class UpdateRoomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Room
+        fields = ('guest_can_pause', 'votes_to_skip', 'code')

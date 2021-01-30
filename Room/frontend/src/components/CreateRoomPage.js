@@ -60,6 +60,17 @@ export default class CreateRoomPage extends Component {
               Create A Room
             </Typography>
           </Grid>
+          <Grid item xs={12} align='center'>
+                  <TextField 
+                      error= {this.state.error}
+                      label='User Name'
+                      placeholder='Enter a User Name'
+                      value = { this.state.roomCode}
+                      helperText = { this.state.error}
+                      variant='outlined'
+                      onChange={this.handleTextFieldChange}
+                  />
+          </Grid>
           <Grid item xs={12} align="center">
             <FormControl component="fieldset">
               <FormHelperText>

@@ -7,7 +7,8 @@ export default class RoomJoinPage extends Component {
         super(props);
         this.state = {
             roomCode: "",
-            error: ""
+            error: "", 
+            userName: "",
         };
 
         this.handleTextFieldChange = this.handleTextFieldChange.bind(this);
@@ -22,6 +23,17 @@ export default class RoomJoinPage extends Component {
                     <Typography variant='h4' component='h4'>
                         Join a Club Room
                     </Typography>
+                </Grid>
+                <Grid item xs={12} align='center'>
+                    <TextField 
+                        error= {this.state.error}
+                        label='User Name'
+                        placeholder='Enter a User Name'
+                        value = { this.state.roomCode}
+                        helperText = { this.state.error}
+                        variant='outlined'
+                        onChange={this.handleTextFieldChange}
+                    />
                 </Grid>
                 <Grid item xs={12} align='center'>
                     <TextField 
@@ -67,8 +79,7 @@ export default class RoomJoinPage extends Component {
                 }
             }).catch((error) => {
                 console.log(error);
-            });
-            
+            });   
     }
 
 }
