@@ -27,17 +27,6 @@ export default class RoomJoinPage extends Component {
                 <Grid item xs={12} align='center'>
                     <TextField 
                         error= {this.state.error}
-                        label='User Name'
-                        placeholder='Enter a User Name'
-                        value = { this.state.roomCode}
-                        helperText = { this.state.error}
-                        variant='outlined'
-                        onChange={this.handleTextFieldChange}
-                    />
-                </Grid>
-                <Grid item xs={12} align='center'>
-                    <TextField 
-                        error= {this.state.error}
                         label='Code'
                         placeholder='Enter a Room Code'
                         value = { this.state.roomCode}
